@@ -1,0 +1,811 @@
+/* ==========================================
+   RESET CSS
+   Menghilangkan margin & padding bawaan browser
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Font Website */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F5F1E8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container agar isi website tidak terlalu lebar */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Memberi jarak setiap section */
+.section {
+    padding: 80px 0;
+}
+
+/* Judul setiap section */
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0057B8;
+    font-size: 36px;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background: #0057B8;
+
+    color: white;
+
+    z-index: 1000;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
+
+}
+
+/* Logo */
+.logo {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 22px;
+    font-weight: 700;
+
+}
+
+/* Gambar Logo */
+.logo-img {
+
+    height: 40px;
+    width: auto;
+
+    object-fit: contain;
+
+}
+
+/* Menu */
+.nav-links {
+
+    display: flex;
+    list-style: none;
+    gap: 25px;
+
+}
+
+/* Link Menu */
+.nav-links a {
+
+    color: white;
+    text-decoration: none;
+
+    transition: .3s;
+
+    font-weight: 500;
+
+}
+
+/* Hover Menu */
+.nav-links a:hover {
+
+    color: #FFD166;
+
+}
+
+/* Menu Aktif */
+.nav-links a.active {
+
+    border-bottom: 2px solid white;
+
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero {
+
+    position: relative;
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+
+    background: linear-gradient(135deg,
+            #0057B8,
+            #8B5E3C,
+            #F5F1E8),
+        url("images/crowd.png");
+
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+
+}
+
+/* Overlay agar teks tetap terbaca di atas foto */
+.hero-overlay {
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(135deg,
+            rgba(0, 87, 184, .82),
+            rgba(139, 94, 60, .75),
+            rgba(245, 241, 232, .55));
+
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Tagline tonality di atas judul hero */
+.hero-tagline {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 8px 20px;
+
+    background: rgba(255, 255, 255, .15);
+
+    border: 1px solid rgba(255, 255, 255, .4);
+
+    border-radius: 50px;
+
+    font-size: 14px;
+
+    letter-spacing: .5px;
+
+    backdrop-filter: blur(4px);
+
+}
+
+/* Isi Hero */
+.hero-content {
+
+    width: 80%;
+
+}
+
+/* Judul Hero */
+.hero h1 {
+
+    font-size: 60px;
+
+    margin-bottom: 20px;
+
+}
+
+/* Subjudul */
+.hero p {
+
+    font-size: 22px;
+
+    margin-bottom: 35px;
+
+}
+
+/* Tempat tombol */
+.hero-button {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    transition: .4s;
+
+    font-weight: 600;
+
+}
+
+/* Tombol utama */
+.btn-primary {
+
+    background: #C8453C;
+
+    color: white;
+
+}
+
+/* Hover */
+.btn-primary:hover {
+
+    transform: translateY(-5px);
+
+    background: #b53d36;
+
+}
+
+/* Tombol kedua */
+.btn-secondary {
+
+    background: white;
+
+    color: #0057B8;
+
+}
+
+/* Hover */
+.btn-secondary:hover {
+
+    transform: translateY(-5px);
+
+}
+
+/* ==========================================
+   ABOUT
+========================================== */
+
+.about {
+
+    text-align: center;
+
+}
+
+.about p {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+}
+
+/* Sub judul pengantar di bawah h2 */
+.section-lead {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: -20px auto 40px;
+
+    color: #555;
+
+    font-size: 17px;
+
+}
+
+/* Latar alternatif agar section bervariasi */
+.alt-bg {
+
+    background: #EFE7D8;
+
+}
+
+/* ==========================================
+   SPLIT SECTION (Gambar + Teks)
+========================================== */
+
+.split-section {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+
+    margin-bottom: 60px;
+
+}
+
+.split-section:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.split-section.reverse {
+
+    flex-direction: row-reverse;
+
+}
+
+.split-text,
+.split-image {
+
+    flex: 1;
+
+}
+
+.split-text.full {
+
+    flex: 1 1 100%;
+
+    text-align: center;
+
+}
+
+.split-text h3 {
+
+    color: #0057B8;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+}
+
+.split-text p {
+
+    font-size: 16px;
+
+    color: #444;
+
+}
+
+.split-image img {
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .15);
+
+    display: block;
+
+}
+
+/* ==========================================
+   PARTNER CARD (Anchor Tenant)
+========================================== */
+
+.partner-card {
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .1);
+
+    transition: .4s;
+
+    text-align: center;
+
+    padding-bottom: 25px;
+
+}
+
+.partner-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.partner-card img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    margin-bottom: 15px;
+
+}
+
+.partner-card h3 {
+
+    color: #0057B8;
+
+    margin: 0 20px 8px;
+
+}
+
+.partner-tag {
+
+    display: inline-block;
+
+    background: #FFD166;
+
+    color: #333;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    padding: 4px 12px;
+
+    border-radius: 50px;
+
+    margin-bottom: 12px;
+
+}
+
+.partner-card p {
+
+    padding: 0 20px;
+
+    font-size: 15px;
+
+    color: #555;
+
+}
+
+/* Jumlah tenant pada Featured Tenant card */
+.tenant-count {
+
+    display: inline-block;
+
+    background: #0057B8;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    padding: 3px 12px;
+
+    border-radius: 50px;
+
+    margin-bottom: 12px;
+
+}
+
+/* Catatan free entry di bawah tabel rundown */
+.rundown-note {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-weight: 600;
+
+    color: #0057B8;
+
+}
+
+/* Tagline tonality di footer */
+.footer-tagline {
+
+    font-size: 14px;
+
+    opacity: .85;
+
+    font-style: italic;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.card-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 25px;
+
+}
+
+/* Isi Card */
+.card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .1);
+
+    transition: .4s;
+
+}
+
+/* Hover Card */
+.card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+/* Icon Card */
+.card h1 {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+/* Judul Card */
+.card h3 {
+
+    margin-bottom: 15px;
+
+    color: #0057B8;
+
+}
+
+/* ==========================================
+   TABLE
+========================================== */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+
+}
+
+/* Header Tabel */
+th {
+
+    background: #0057B8;
+
+    color: white;
+
+    padding: 18px;
+
+}
+
+/* Isi tabel */
+td {
+
+    padding: 20px;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+/* Hover tabel */
+tr:hover {
+
+    background: #f8f8f8;
+
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+#contact {
+
+    text-align: center;
+
+}
+
+#contact p {
+
+    margin: 12px 0;
+
+    font-size: 18px;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    background: #0057B8;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+}
+
+footer h3 {
+
+    margin-bottom: 10px;
+
+}
+
+footer p {
+
+    margin: 5px;
+
+}
+
+/* ==========================================
+   BACK TO TOP BUTTON
+========================================== */
+
+#topBtn {
+
+    position: fixed;
+
+    bottom: 30px;
+
+    right: 30px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #C8453C;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    display: none;
+
+    transition: .3s;
+
+}
+
+/* Hover */
+#topBtn:hover {
+
+    transform: scale(1.1);
+
+}
+
+/* ==========================================
+   ANIMASI FADE
+   JavaScript akan menambahkan class "show"
+========================================== */
+
+.section {
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition: 1s;
+
+}
+
+.section.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/* ==========================================
+   RESPONSIVE TABLET
+========================================== */
+
+@media(max-width:768px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+    .nav-links {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+    .hero h1 {
+
+        font-size: 42px;
+
+    }
+
+    .hero p {
+
+        font-size: 18px;
+
+    }
+
+    .split-section,
+    .split-section.reverse {
+
+        flex-direction: column;
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE HP
+========================================== */
+
+@media(max-width:500px) {
+
+    .hero h1 {
+
+        font-size: 32px;
+
+    }
+
+    .section h2 {
+
+        font-size: 28px;
+
+    }
+
+    .btn {
+
+        width: 100%;
+
+    }
+
+    .hero-button {
+
+        flex-direction: column;
+
+    }
+
+}
